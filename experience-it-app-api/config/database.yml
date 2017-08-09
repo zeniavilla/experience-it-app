@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: experience-it-app-api_production
-  username: experience-it-app-api
-  password: <%= ENV['EXPERIENCE-IT-APP-API_DATABASE_PASSWORD'] %>
+  username: zenia
+  # password: <%= ENV['EXPERIENCE-IT-APP-API_DATABASE_PASSWORD'] %>
+  password: password
