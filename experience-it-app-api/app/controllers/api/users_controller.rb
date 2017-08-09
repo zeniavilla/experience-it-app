@@ -1,4 +1,4 @@
-class Api::RegisterController < ApplicationController
+class Api::UsersController < ApplicationController
 
     def create
         user = User.new(user_params)
@@ -6,7 +6,6 @@ class Api::RegisterController < ApplicationController
             render json: user
         else
             render json: { messages: user.errors }, status: 400
-        end
     end
 
     private
