@@ -8,6 +8,10 @@ class Api::UsersController < ApplicationController
             render json: { messages: user.errors }, status: 400
     end
 
+    def show
+        render json: User.find_by(id: params[:id])
+    end
+
     private
 
     def user_params
