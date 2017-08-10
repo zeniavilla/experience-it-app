@@ -1,0 +1,24 @@
+.experience-card {
+    float: left;
+    margin-right: 2%;
+}
+
+.experience-img-wrapper {
+    height: 400px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.experience-card img {
+    margin: 0 0 0 -150px;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+    .experience-card img:hover {
+        opacity: 0.6;
+    }
+
+div.experience-card:first-of-type {
+    margin-left: 2%;
+}
