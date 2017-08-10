@@ -3,6 +3,8 @@ import './App.css';
 
 import Experiences from './Experiences';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,13 +15,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/api/experiences')
+    fetch(`${API_URL}/experiences`)
       .then(response => response.json())
       .then(experiences => this.setState({ experiences }))
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
           <Experiences experiences={this.state.experiences} />  
