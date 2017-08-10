@@ -4,10 +4,13 @@ import { connect } from 'react-redux';
 import Experience from '../components/Experience';
 import './Experience.css';
 import ExperienceForm from '../containers/ExperienceForm';
+import { getExperiences } from '../actions/experienceActions';
 
 class Experiences extends Component {
 
-    componentDidMount() {}
+    componentDidMount() {
+        this.props.getExperiences();
+    }
     
     render() {
         return (
@@ -24,4 +27,4 @@ const mapStateToProps = state => {
     return ({experiences: state.experiences})
 }
 
-export default connect (mapStateToProps)(Experiences);
+export default connect (mapStateToProps, { getExperiences })(Experiences);
