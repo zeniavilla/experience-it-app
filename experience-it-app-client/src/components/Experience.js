@@ -1,10 +1,9 @@
 import React from 'react';
-import './Experience.css';
 
 const Experience = (props) =>
     <div className="experience-card" key={props.experience.id}>
         <div className="experience-img-wrapper">
-            <img src={props.experience.img_url} />
+            <img src={props.experience.img_url} alt={props.experience.name} />
         </div>
         <h2>{props.experience.name}</h2>
         <h4>{props.experience.location}</h4>

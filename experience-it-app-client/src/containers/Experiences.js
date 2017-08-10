@@ -1,5 +1,6 @@
 import React from 'react';
-import Experience from './Experience';
+import Experience from '../components/Experience';
+import './Experience.css';
 
 const Experiences = props => {
     return <div>
