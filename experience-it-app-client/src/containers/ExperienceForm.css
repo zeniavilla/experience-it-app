@@ -3,8 +3,8 @@
     max-width: 35%;
 }
 
-.form-field {
-    margin-bottom: 2%;
+.form-field, .form-field-select {
+    margin-bottom: 7%;
 }
 
 .form-field input, .form-field-select select {
@@ -13,25 +13,28 @@
     padding: 15px;
 }
 
+.form-field input, .form-field::placeholder, .form-field-select select {
+    font: 1em 'Lato', sans-serif;
+}
+
 .form-field input {
-    font: 1em 'Roboto', sans-serif;
     height: 20px;
     width: 90%; 
 }
 
 .form-field input::placeholder {
-    font: 1.2em 'Roboto', Helvetica, sans-serif;
     color: #a9a9a9;
 }
 
 .form-field-select select {
     background: #fff;
-    font: 1.2em 'Roboto', sans-serif;
     width: 94.5%; 
 }
 
 .form-main h1, .form-main h2 {
     color:#585858;
+    font-family: 'Roboto', sans-serif;
+    line-height: 90%;
 }
 
 .form-main h2 {
@@ -40,7 +43,6 @@
 }
 
 .form-body {
-    line-height: 170%;
-    margin: 0 auto;
-    /* max-width: 30%; */
+    line-height: 180%;
+    margin: 5% auto;
 }
