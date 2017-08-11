@@ -5,3 +5,9 @@ export const updateExperienceFormData = experienceFormData => {
         experienceFormData
     }
 }
+
+export const resetExperienceForm = () => {
+    return {
+        type: 'RESET_EXPERIENCE_FORM'
+    }
+}

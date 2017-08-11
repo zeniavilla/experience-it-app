@@ -1,3 +1,5 @@
+import { resetExperienceForm } from './experienceFormActions';
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 // ** Action Creators **
@@ -35,7 +37,10 @@ export const createExperience = experience => {
             body: JSON.stringify({ experience: experience })
         })
             .then(response => response.json())
-            .then(experience => dispatch(addExperience(experience)) )
+            .then(experience => {
+                dispatch(addExperience(experience))
+                dispatch(resetExperienceForm()) 
+            })
             .catch(error => console.log(error))
     }
 }
