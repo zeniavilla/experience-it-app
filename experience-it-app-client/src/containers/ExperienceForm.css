@@ -1,14 +1,22 @@
+.form-main {
+    margin: 0 auto;
+    max-width: 35%;
+}
+
 .form-field {
     margin-bottom: 2%;
 }
 
-.form-field input {
+.form-field input, .form-field-select select {
     border: 1px solid #dbdbdb;
     color: #a9a9a9;
+    padding: 15px;
+}
+
+.form-field input {
     font: 1em 'Roboto', sans-serif;
     height: 20px;
-    padding: 15px;
-    width: 30%;
+    width: 90%; 
 }
 
 .form-field input::placeholder {
@@ -16,16 +24,23 @@
     color: #a9a9a9;
 }
 
+.form-field-select select {
+    background: #fff;
+    font: 1.2em 'Roboto', sans-serif;
+    width: 94.5%; 
+}
+
 .form-main h1, .form-main h2 {
     color:#585858;
 }
 
 .form-main h2 {
-    font-size: 1.4em;
+    font-size: 1.3em;
+    letter-spacing: .6px;
 }
 
 .form-body {
     line-height: 170%;
     margin: 0 auto;
-    max-width: 30%;
+    /* max-width: 30%; */
 }
