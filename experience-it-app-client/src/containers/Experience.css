@@ -31,6 +31,10 @@
 
 .experience-card h2 {
     color:#585858;
-    font: 500 2em/100% 'Roboto', sans-serif;
+    font: 500 1.2em/100% 'Roboto', sans-serif;
     text-transform: capitalize;
+}
+
+.experience-card h4 {
+    font-size: 1em;
 }
