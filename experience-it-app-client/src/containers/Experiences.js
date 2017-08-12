@@ -13,9 +13,8 @@ class Experiences extends Component {
     
     render() {
         return (
-            <div>
-                <h3>Experiences Component</h3>
-                {this.props.experiences.map((experience, index) => <Experience key={index} experience={experience} />)}
+            <div className="experiences-main clearfix">
+                 {this.props.experiences.map((experience, index) => <Experience key={index} experience={experience} />)} 
             </div>
         )
     }

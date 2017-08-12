@@ -32,7 +32,7 @@ class ExperienceForm extends Component {
 
                     <label htmlFor="name"><h2>What is the experience?</h2></label>
                     <div className="form-field">
-                        <input type="textarea" name="name" id="name" placeholder="Downtown LA Artwalk" value={name} onChange={this.handleOnChange} />
+                        <input type="textarea" name="name" id="name" placeholder="Downtown LA Art Walk" value={name} onChange={this.handleOnChange} />
                     </div>
 
                     <label htmlFor="category"><h2>Select a category</h2></label>
