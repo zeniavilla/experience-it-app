@@ -27,5 +27,14 @@
 
 body {
     color: #484848; 
-    font: 500 1.1em/100% 'Lato', sans-serif;
+    font: 500 1em/100% 'Lato', sans-serif;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
 }
