@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
 
-import Experience from '../components/Experience';
 import './Experience.css';
+import Experience from '../components/Experience';
+import ExperienceShow from '../containers/ExperienceShow';
+
 import { getExperiences } from '../actions/experienceActions';
 
 class Experiences extends Component {
@@ -13,8 +16,13 @@ class Experiences extends Component {
     
     render() {
         return (
-            <div className="experiences-main clearfix">
-                 {this.props.experiences.map((experience, index) => <Experience key={index} experience={experience} />)} 
+            <div>
+                <Switch>
+                <Route path="/experiences/:experienceId" component={ExperienceShow} />
+                    <div className="experiences-main clearfix">
+                        {this.props.experiences.map((experience, index) => <Experience key={index} experience={experience} />)} 
+                    </div>
+                </Switch>
             </div>
         )
     }
