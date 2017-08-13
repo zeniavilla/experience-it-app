@@ -9,15 +9,20 @@ class ExperienceForm extends Component {
 
     handleOnChange = event => {
         const { name, value } = event.target;
+        
         const currentExperienceFormData = Object.assign({}, this.props.experienceFormData, {
             [name]: value
         })
-        this.props.updateExperienceFormData(currentExperienceFormData)
+        
+        this.props.updateExperienceFormData(currentExperienceFormData);
     }
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.createExperience(this.props.experienceFormData)
+        const { createExperience, history } = this.props;
+
+        createExperience(this.props.experienceFormData);
+        history.push('/experiences');
     }
 
     render() {
