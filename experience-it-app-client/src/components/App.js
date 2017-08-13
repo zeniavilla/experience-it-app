@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Experiences from '../containers/Experiences';
 import ExperienceForm from '../containers/ExperienceForm';
-import ExperienceShow from '../containers/ExperienceShow';
 import NavBar from './NavBar';
 
 class App extends Component {
@@ -16,7 +15,6 @@ class App extends Component {
 
               <Route path="/(experiences|)" component={Experiences} />
               <Route path="/describe-your-experience" component={ExperienceForm} />
-              <Route path="/experiences/:id" component={ExperienceShow} />
           </div>
       </Router>
     );
