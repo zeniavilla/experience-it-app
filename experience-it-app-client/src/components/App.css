@@ -38,3 +38,9 @@ body {
     height: 0;
     line-height: 0;
 }
+
+/* Navbar  */
+
+nav.brand-navbar {
+    margin-bottom: 0;
+}
