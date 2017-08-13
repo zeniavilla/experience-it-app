@@ -46,11 +46,9 @@ const backgroundStyle ={
 const mapStateToProps = (state, ownProps) => {
     const experience = state.experiences.find(experience => experience.id == ownProps.match.params.experienceId)
 
-    if (experience) {
-        return { experience }
-    } else {
-        return { experience: {} }
-    }
+    return (experience)
+    ? { experience }
+    : { experience: {} }
 }
 
 export default connect (mapStateToProps)(ExperienceShow);
