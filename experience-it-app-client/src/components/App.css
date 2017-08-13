@@ -30,6 +30,11 @@ body {
     font: 500 1.5em/100% 'Lato', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #585858;
+    font-family: 'Roboto', sans-serif;
+}
+
 .clearfix:after {
     content: ".";
     display: block;
