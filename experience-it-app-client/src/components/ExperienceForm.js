@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './ExperienceForm.css'
+
 const ExperienceForm = props => {
     
     const { name, category, location, time, recommended_times, img_url } = props.experienceFormData;
