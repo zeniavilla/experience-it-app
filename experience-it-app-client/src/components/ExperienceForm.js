@@ -19,20 +19,10 @@ const ExperienceForm = props => {
                 <label htmlFor="category"><h2>Select a category</h2></label>
                 <div className="form-field-select">
                     <select name="category" id="category" value={category} onChange={props.handleOnChange}>
-                        <option>Arts</option>
-                        <option>Entertainment</option>
-                        <option>Food & Drink</option>
-                        <option>Lifestyle</option>
-                        <option>Nature</option>
-                        <option>Social Impact</option>
-                        <option>Technology</option>
-                        <option>Business</option>
-                        <option>Fashion</option>
-                        <option>History</option>
-                        <option>Music</option>
-                        <option>Nightlife</option>
-                        <option>Sports</option>
-                        <option>Wellness</option>
+                        {['Arts', 'Entertainment', 'Food & Drink', 'Lifestyle', 'Nature', 'Social Impact', 'Technology', 'Business', 'Fashion', 'History', 'Music', 'Nightlife', 'Sports', 'Wellness'].map(category => {
+                            return <option>{category}</option>
+                            })
+                        }
                     </select>
                 </div>
 
