@@ -22,7 +22,7 @@ const ExperienceForm = props => {
                 <div className="form-field-select">
                     <select name="category" id="category" value={category} onChange={props.handleOnChange}>
                         {['Arts', 'Entertainment', 'Food & Drink', 'Lifestyle', 'Nature', 'Social Impact', 'Technology', 'Business', 'Fashion', 'History', 'Music', 'Nightlife', 'Sports', 'Wellness'].map(category => {
-                            return <option>{category}</option>
+                            return <option key={category}>{category}</option>
                             })
                         }
                     </select>
