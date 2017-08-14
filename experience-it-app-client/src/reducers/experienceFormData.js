@@ -1,9 +1,9 @@
 const initialState = {
     name: '',
-    category: '',
+    category: 'arts',
     location: '',
     time: '',
-    recommended_times: '',
+    recommended_times: 'anytime',
     img_url: ''
 }
 
