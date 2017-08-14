@@ -28,8 +28,6 @@ class ExperienceNew extends Component {
     }
 
     render() {
-        const { name, category, location, time, recommended_times, img_url } = this.props.experienceFormData;
-
         return (
             <ExperienceForm experienceFormData={this.props.experienceFormData} handleOnChange={this.handleOnChange} handleOnSubmit={this.handleOnSubmit} />
         )
