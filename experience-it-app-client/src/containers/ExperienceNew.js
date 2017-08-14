@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import './ExperienceForm.css'
 import ExperienceForm from '../components/ExperienceForm';
 
 import { updateExperienceFormData } from '../actions/experienceFormActions';
