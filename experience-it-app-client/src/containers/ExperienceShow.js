@@ -1,54 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Col, Image } from 'react-bootstrap';
 
-import './ExperienceShow.css'
+import ExperienceShowItem from '../components/ExperienceShowItem';
 
+import { getExperienceItem } from '../actions/experienceActions';
 
-const ExperienceShow = ({ experience }) => {
+class ExperienceShow extends Component {
 
-const backgroundStyle ={
-    backgroundImage: `url(${experience.img_url})`
-};
+    componentDidMount = () => {
+        const experienceId = this.props.match.params.experienceId;
+        this.props.getExperienceItem(experienceId);
+    }
 
-    return (
-    <div className="experience-show-main clearfix">
-        <Col xs={6}>
-            <h1>{experience.name}</h1>
-            <h4>{experience.location}</h4>
-
-            <div className="experience-show-text category">{experience.category} experience</div>
-
-            <div className="experience-show-text body-text">{experience.time} total</div>
-
-            <div className="experience-show-text body-text">
-                Recommended time:
-                <div>{experience.recommended_times}</div>
-            </div>
-            
-            
-
-            <div className="experience-show-text">♥ 0 likes</div>
-            
-        </Col>
-        
-        <Col xs={6}>
-            <Grid className="show-img" style={backgroundStyle} fluid>
-                {/* <Image src={experience.img_url} /> */}
-            </Grid> 
-        </Col>
-
-    </div>
-    )
+    render() {
+        return <ExperienceShowItem experience={this.props.experience} />
+    }
 }
 
-
-const mapStateToProps = (state, ownProps) => {
-    const experience = state.experiences.find(experience => experience.id == ownProps.match.params.experienceId)
-
-    return (experience)
-    ? { experience }
-    : { experience: {} }
+const mapStateToProps = state => {
+    return ({experience: state.currentExperience})
 }
 
-export default connect (mapStateToProps)(ExperienceShow);
+export default connect (mapStateToProps, { getExperienceItem })(ExperienceShow);
