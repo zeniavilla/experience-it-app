@@ -1,6 +1,6 @@
 const initialState = {
     name: '',
-    category: 'arts',
+    category: 'Arts',
     location: '',
     time: '',
     recommended_times: 'anytime',
