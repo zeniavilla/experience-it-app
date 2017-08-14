@@ -10,6 +10,13 @@ const setExperiences = experiences => {
     }
 }
 
+const setExperience = experience => {
+    return {
+        type: 'GET_EXPERIENCE_ITEM',
+        experience
+    }
+}
+
 const addExperience = experience => {
     return {
         type: 'CREATE_EXPERIENCE',
@@ -23,6 +30,15 @@ export const getExperiences = () => {
         return fetch(`${API_URL}/experiences`)
             .then(response => response.json())
             .then(experiences => dispatch(setExperiences(experiences)))
+            .catch(error => console.log(error));
+    }
+}
+
+export const getExperienceItem = experienceId => {
+    return dispatch => {
+        return fetch(`${API_URL}/experiences/${experienceId}`)
+            .then(response => response.json())
+            .then(experience => dispatch(setExperience(experience)))
             .catch(error => console.log(error));
     }
 }
