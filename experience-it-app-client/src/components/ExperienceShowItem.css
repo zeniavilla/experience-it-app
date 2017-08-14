@@ -29,9 +29,35 @@
 }
 
 .category {
-    margin-bottom: 8%;
+    margin-bottom: 13%;
 }
 
 .body-text {
     margin-bottom: 4%;
+}
+
+.recommended-times-icons span.fa {
+    font-size: 1.7em;
+}
+
+.recommended-times-icons span {
+    margin: 20px 20px 50px 0;
+}
+
+.fa.fa-sun-o {
+    color: #f2c44f;
+}
+
+.fa.fa-moon-o {
+    color: #82abff;
+}
+
+.experience-show-text span.fa.fa-heart {
+    color: #f75b5b;
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+
+.fa {
+    opacity: .8;
 }
