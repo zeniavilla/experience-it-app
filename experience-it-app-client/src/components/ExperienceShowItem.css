@@ -52,12 +52,12 @@
     color: #82abff;
 }
 
-.experience-show-text span.fa.fa-heart {
+.fa.fa-heart, .fa.fa-heart-o {
     color: #f75b5b;
     font-size: 1.3em;
-    margin-right: 10px;
+    margin-right: 1%;
 }
 
-.fa {
+.experience-show-text.fa {
     opacity: .8;
 }
