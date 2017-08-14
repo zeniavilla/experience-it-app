@@ -8,7 +8,7 @@ const ExperienceShowItem = props => {
     
     const { name, location, category, time, recommended_times, img_url } = props.experience;
 
-    const backgroundStyle ={
+    const backgroundStyle = {
         backgroundImage: `url(${img_url})`
     };
 
@@ -24,10 +24,24 @@ const ExperienceShowItem = props => {
 
                 <div className="experience-show-text body-text">
                     Recommended time:
-                    <div>{recommended_times}</div>
+                    <div className="recommended-times-icons">
+                        {recommended_times === 'daytime' &&
+                            <span className="fa fa-sun-o"></span>
+                        }
+                        {recommended_times === 'nighttime' &&
+                            <span className="fa fa-moon-o"></span>
+                        }
+                        {recommended_times === 'daytime, nighttime' &&
+                            <div>
+                                <span className="fa fa-sun-o"></span><span className="fa fa-moon-o"></span>
+                            </div>
+                        }
+                    </div>
                 </div>
 
-                <div className="experience-show-text"><span className="fa fa-facebook"></span>♥ 0 likes</div>
+                <div className="experience-show-text">
+                    <span className="fa fa-heart"></span> 0 likes
+                </div>
                 
             </Col>
             
