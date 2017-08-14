@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Col } from 'react-bootstrap';
+import '../font-awesome-4.7.0/css/font-awesome.css'
 
 import './ExperienceShowItem.css'
 
@@ -26,7 +27,7 @@ const ExperienceShowItem = props => {
                     <div>{recommended_times}</div>
                 </div>
 
-                <div className="experience-show-text">♥ 0 likes</div>
+                <div className="experience-show-text"><span className="fa fa-facebook"></span>♥ 0 likes</div>
                 
             </Col>
             
