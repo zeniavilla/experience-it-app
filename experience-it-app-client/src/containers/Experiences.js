@@ -17,9 +17,13 @@ class Experiences extends Component {
         this.props.getExperiences();
     }
 
-    // componentDidUpdate() {
-    //     this.props.getExperiences();
-    // }
+    shouldComponentUpdate = (nextProps, nextState) => {
+        return (nextProps.experiences.length > this.props.experiences.length || nextProps.experience.length !== this.props.experience.length)
+    }
+
+    componentDidUpdate() {
+        this.props.getExperiences();
+    }
 
     handleOnClick = (event) => {
         event.preventDefault();
@@ -48,7 +52,10 @@ class Experiences extends Component {
 };
 
 const mapStateToProps = state => {
-    return ({ experiences: state.experiences })
+    return ({ 
+        experiences: state.experiences,
+        experience: state.currentExperience 
+    })
 }
 
 export default connect (mapStateToProps, { getExperiences, likeExperience })(Experiences);
