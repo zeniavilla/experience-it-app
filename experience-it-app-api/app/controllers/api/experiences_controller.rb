@@ -17,10 +17,19 @@ class Api::ExperiencesController < ApplicationController
         render json: Experience.find_by(id: params[:id])
     end
 
+    def update
+        experience = Experience.find_by(id: params[:id])
+        if experience.update(experience_params)
+            render json: experience
+        else
+            render json: { message: experience.errors }, status: 400
+        end
+    end
+
     private
 
     def experience_params
-        params.require(:experience).permit(:name, :category, :location, :time, :recommended_times, :img_url)
+        params.require(:experience).permit(:name, :category, :location, :time, :recommended_times, :img_url, :likes, :liked)
     end
 
 end
