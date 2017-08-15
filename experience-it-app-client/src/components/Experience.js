@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Grid } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-import '../font-awesome-4.7.0/css/font-awesome.css'
+import '../font-awesome-4.7.0/css/font-awesome.css';
 
 const Experience = props => {
 
@@ -12,7 +12,7 @@ const Experience = props => {
     return (
         <div>
             <NavLink to={`/experiences/${id}`}>
-                <div className="experience-card" key={id}>
+                <div className="experience-card" id={`experience-${id}`} key={id}>
                     <Grid className="experience-img-wrapper" fluid>    
                         <Image src={img_url} alt={name} /> 
                     </Grid>
