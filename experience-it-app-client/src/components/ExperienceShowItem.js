@@ -6,7 +6,7 @@ import './ExperienceShowItem.css'
 
 const ExperienceShowItem = props => {
     
-    const { name, location, category, time, recommended_times, img_url } = props.experience;
+    const { name, location, category, time, recommended_times, img_url, likes } = props.experience;
 
     const backgroundStyle = {
         backgroundImage: `url(${img_url})`
@@ -40,7 +40,7 @@ const ExperienceShowItem = props => {
                 </div>
 
                 <div className="experience-show-text">
-                    <span className="fa fa-heart"></span> 0 likes
+                    <span className="fa fa-heart"></span> {likes} likes
                 </div>
                 
             </Col>
