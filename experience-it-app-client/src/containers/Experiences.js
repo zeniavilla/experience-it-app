@@ -6,7 +6,7 @@ import './Experience.css';
 import Experience from '../components/Experience';
 import ExperienceShow from '../containers/ExperienceShow';
 
-import { getExperiences, getExperienceItem, likeExperience } from '../actions/experienceActions';
+import { getExperiences, likeExperience } from '../actions/experienceActions';
 
 class Experiences extends Component {
     constructor(props) {
@@ -17,23 +17,29 @@ class Experiences extends Component {
         this.props.getExperiences();
     }
 
+    // componentDidUpdate() {
+    //     this.props.getExperiences();
+    // }
+
     handleOnClick = (event) => {
         event.preventDefault();
         
         const experienceId = event.target.id;
         const experience = this.props.experiences.find(experience => experience.id == experienceId)
 
-        // this.props.getExperienceItem(experienceId);
         this.props.likeExperience(experience);
     }
     
     render() {
+        const renderExperiences = this.props.experiences.map(experience => 
+            <Experience key={experience.id} experience={experience} handleOnClick={this.handleOnClick} />)
+
         return (
             <div>
                 <Switch>
                 <Route path="/experiences/:experienceId" component={ExperienceShow} />
                     <div className="experiences-main clearfix">
-                        {this.props.experiences.map((experience, index) => <Experience key={index} experience={experience} handleOnClick={this.handleOnClick} />)} 
+                        {renderExperiences}
                     </div>
                 </Switch>
             </div>
@@ -42,10 +48,7 @@ class Experiences extends Component {
 };
 
 const mapStateToProps = state => {
-    return ({
-        experiences: state.experiences,
-        experience: state.currentExperience
-    })
+    return ({ experiences: state.experiences })
 }
 
-export default connect (mapStateToProps, { getExperiences, getExperienceItem, likeExperience })(Experiences);
+export default connect (mapStateToProps, { getExperiences, likeExperience })(Experiences);
