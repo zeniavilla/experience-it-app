@@ -38,3 +38,7 @@
 .experience-card h4 {
     font-size: 1em;
 }
+
+.experience-card i.fa.fa-heart-o:hover:before {
+    content: "\f004";
+}
