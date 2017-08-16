@@ -17,25 +17,23 @@ class Experiences extends Component {
         this.props.getExperiences();
     }
 
-    shouldComponentUpdate = (nextProps, nextState) => {
-        return (nextProps.experiences.length > this.props.experiences.length || nextProps.experience.length !== this.props.experience.length)
-    }
-
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.experience.updated_at !== this.props.experience.updated_at) {
         this.props.getExperiences();
+        }
     }
 
     handleOnClick = (event) => {
         event.preventDefault();
         
-        const experienceId = event.target.id;
-        const experience = this.props.experiences.find(experience => experience.id == experienceId)
+        let experienceId = event.target.id;
+        let experience = this.props.experiences.find(experience => experience.id == experienceId)
 
         this.props.likeExperience(experience);
     }
     
     render() {
-        const renderExperiences = this.props.experiences.map(experience => 
+        let renderExperiences = this.props.experiences.map(experience =>
             <Experience key={experience.id} experience={experience} handleOnClick={this.handleOnClick} />)
 
         return (
