@@ -5,7 +5,7 @@ export const currentExperienceReducer = (state = [], action) => {
             return action.experience;
 
         case 'LIKE_EXPERIENCE':
-            return state.concat(action.experience);
+            return action.experience;
 
         default:
             return state;
