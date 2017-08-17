@@ -34,7 +34,7 @@ const ExperienceShowItem = props => {
                         {recommended_times === 'nighttime' &&
                             <span className="fa fa-moon-o"></span>
                         }
-                        {recommended_times === 'daytime, nighttime' &&
+                        {recommended_times === 'anytime' &&
                             <div>
                                 <span className="fa fa-sun-o"></span><span className="fa fa-moon-o"></span>
                             </div>
