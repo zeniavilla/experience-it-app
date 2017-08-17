@@ -1,4 +1,4 @@
-.brand-navbar.navbar {
+.navbar-fixed-top.navbar.navbar-default {
     background: #fff;
     border-bottom: 1px solid #e4e4e4;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,7 @@ ul.nav.navbar-nav.navbar-right {
     padding-top: 10px;
 }
 
-.brand-navbar.navbar a {
+.navbar-default a {
     color: #585858;
     cursor: pointer;
 }
