@@ -4,7 +4,7 @@
 }
 
 .form-field, .form-field-select {
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 
 .form-field input, .form-field-select select {
@@ -33,7 +33,7 @@
 
 .form-field-select select {
     background: #fff;
-    width: 94.5%; 
+    width: 90%; 
 }
 
 .form-main h1, .form-main h2 {
@@ -48,7 +48,7 @@
 
 .form-body {
     line-height: 180%;
-    margin: 5% auto;
+    margin: 2% auto;
 }
 
 .form-action {
