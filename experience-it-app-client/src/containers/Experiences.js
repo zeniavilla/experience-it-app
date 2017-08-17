@@ -13,17 +13,17 @@ class Experiences extends Component {
         super(props);
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.props.getExperiences();
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate = (prevProps, prevState) => {
         if (prevProps.experience.updated_at !== this.props.experience.updated_at) {
         this.props.getExperiences();
         }
     }
 
-    handleOnClick = (event) => {
+    handleOnClick = event => {
         event.preventDefault();
         
         let experienceId = event.target.id;
