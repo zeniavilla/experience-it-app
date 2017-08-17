@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Grid, Col } from 'react-bootstrap';
+import { Grid, Col } from 'react-bootstrap';
 import Pluralize from 'react-pluralize';
 import { NavLink } from 'react-router-dom';
 
