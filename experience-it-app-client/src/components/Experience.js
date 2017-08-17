@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Grid } from 'react-bootstrap';
+import { Image, Grid, Col } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 import '../font-awesome-4.7.0/css/font-awesome.css';
@@ -7,15 +7,17 @@ import '../font-awesome-4.7.0/css/font-awesome.css';
 const Experience = props => {
 
     const { id, name, location, img_url, likes, liked } = props.experience;
+    const backgroundStyle = {
+        backgroundImage: `url(${img_url})`
+    };
     const handleOnClick = props.handleOnClick;
 
     return (
         <div>
+            <Col xs={2}>
             <NavLink to={`/experiences/${id}`}>
                 <div className="experience-card" id={`experience-${id}`} key={id}>
-                    <Grid className="experience-img-wrapper" fluid>    
-                        <Image src={img_url} alt={name} /> 
-                    </Grid>
+                    <Grid className="experience-img-wrapper" style={backgroundStyle} fluid></Grid> 
                     <h2>{name}</h2>
                     <h4>{location}</h4>
                     <h4><span className="change-icon" onClick={handleOnClick}>
@@ -28,6 +30,7 @@ const Experience = props => {
                     </h4>
                 </div>
             </NavLink>
+            </Col>
         </div>
     )
 }
