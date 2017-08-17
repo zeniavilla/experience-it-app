@@ -9,11 +9,11 @@ const ExperienceForm = props => {
     return (
         <div className="form-main">
             <h1>Pitch an experience</h1>
-            <div className="form-body">As you write, remember that Experience It users are some of the most novelty-driven, curious, adventure-seekers. We showcase the best LA has to offer. Share your unique experience.</div>
+            <div className="form-body">As you write, remember that Experience It users are some of the most novelty-driven, curious, adventure-seekers. We strive to showcase the best LA has to offer, whether it's hikes with scenic views, the best places to bike ride, or the newest food festivals. Share your unique experience.</div>
 
             <form className="experience-form" onSubmit={props.handleOnSubmit}>
 
-                <label htmlFor="name"><h2>What is the experience?</h2></label>
+                <label htmlFor="name"><h2>What's the experience?</h2></label>
                 <div className="form-field">
                     <input type="textarea" name="name" id="name" placeholder="Downtown LA Art Walk" value={name} onChange={props.handleOnChange} />
                 </div>
@@ -28,7 +28,7 @@ const ExperienceForm = props => {
                     </select>
                 </div>
 
-                <label htmlFor="location"><h2>Where is it located?</h2></label>
+                <label htmlFor="location"><h2>Where's it located?</h2></label>
                 <div className="form-field">
                     <input type="text" name="location" id="location" placeholder="Financial District" value={location} onChange={props.handleOnChange} />
                 </div>
