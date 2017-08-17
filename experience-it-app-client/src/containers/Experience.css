@@ -7,21 +7,27 @@
     background-size: cover;
     background-position: center;
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 145%;
     width: 100%;
 }
     .experience-img-wrapper:hover {
         opacity: 0.6;
     }
 
+.experience-card {
+    margin-bottom: 10%;
+}
+
 .experience-card h2 {
     color:#585858;
-    font: 500 1.2em/100% 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
 .experience-card h4 {
-    font-size: 1em;
+    font-size: .9em;
+    font-weight: 400;
 }
 
 .experience-card i.fa.fa-heart-o:hover:before {
