@@ -12,6 +12,7 @@
     padding: 22px 0;
 }
 
+
 .active.navbar-brand {
     border-bottom: none;
 }
@@ -23,8 +24,10 @@ ul.nav.navbar-nav.navbar-right {
 .brand-navbar.navbar a {
     color: #585858;
     cursor: pointer;
-    text-decoration: none;
 }
+    .navbar-right li:hover {
+        opacity: .8;
+    }
 
 .active {
     border-bottom: 3px solid #008489;
