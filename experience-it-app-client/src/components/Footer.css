@@ -1,0 +1,30 @@
+.navbar-static-bottom {
+    border-top: 1px solid #d9d9d9;
+    padding: 30px 0;
+}
+
+nav.navbar-static-bottom.navbar.navbar-default {
+    background: #fff;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.navbar-static-bottom.navbar.navbar-default div.container {
+    max-width: 99%;
+}
+
+a.navbar-brand {
+    font-size: 1em;
+}
+
+.navbar-static-bottom i {
+    font-size: 1.5em;
+}
+    .navbar-static-bottom i:hover {
+        opacity: .5;
+        transition: all 500ms linear;
+    }
