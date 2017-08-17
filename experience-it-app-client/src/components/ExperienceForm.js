@@ -53,7 +53,7 @@ const ExperienceForm = props => {
                 </div>
 
                 <div className="form-action">
-                    <button className="btn-form" type="submit">Submit</button>
+                    <button className="btn-primary" type="submit">Submit</button>
                 </div>
             </form>
         </div>

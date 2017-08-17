@@ -54,3 +54,18 @@
 .form-action {
     margin-bottom: 10%;
 }
+
+button.btn-primary, .btn-primary:active, .btn-primary:focus {
+    background-color: #ff5a5f;
+    background-image: none;
+    border: 2px solid #ff5a5f;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 35px;
+}
+
+.btn-primary:hover, .btn-primary:active:hover, .btn-primary:active {
+    background-color: #ff7e82;
+    border: 2px solid #ff7e82;
+}
