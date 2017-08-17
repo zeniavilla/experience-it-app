@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Grid, Col } from 'react-bootstrap';
+import Pluralize from 'react-pluralize';
 import { NavLink } from 'react-router-dom';
 
 import '../font-awesome-4.7.0/css/font-awesome.css';
@@ -7,9 +8,11 @@ import '../font-awesome-4.7.0/css/font-awesome.css';
 const Experience = props => {
 
     const { id, name, location, img_url, likes, liked } = props.experience;
+
     const backgroundStyle = {
         backgroundImage: `url(${img_url})`
     };
+
     const handleOnClick = props.handleOnClick;
 
     return (
@@ -26,7 +29,7 @@ const Experience = props => {
                         : <i id={id} className="fa fa-heart-o"></i>
                         }
                     </span>
-                    {likes} likes
+                    <Pluralize singular="like" plural="likes" count={likes} />
                     </h4>
                 </div>
             </NavLink>

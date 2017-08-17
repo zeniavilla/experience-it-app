@@ -12,6 +12,9 @@ const ExperienceShowItem = props => {
         backgroundImage: `url(${img_url})`
     };
 
+    const maybePluralize = (count, noun, suffix = 's') =>
+        `${count} ${noun}${count !== 1 ? suffix : ''}`;
+
     return (
         <div className="experience-show-main clearfix">
             <Col xs={6}>
@@ -40,7 +43,8 @@ const ExperienceShowItem = props => {
                 </div>
 
                 <div className="experience-show-text">
-                    <span className="fa fa-heart"></span> {likes} likes
+                    <span className="fa fa-heart"></span> 
+                    {maybePluralize(likes, 'like')}
                 </div>
                 
             </Col>
