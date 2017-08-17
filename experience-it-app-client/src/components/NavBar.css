@@ -5,13 +5,12 @@
     margin-bottom: 30px;
 }
 
-.navbar-brand {
-    font: 600 1.4em 'Lato', sans-serif;
+div.navbar-header a.navbar-brand {
+    font: 600 1.2em 'Lato', sans-serif;
     height: 70px;
     letter-spacing: 3px;
-    padding: 22px 0;
+    padding: 23px 0;
 }
-
 
 .active.navbar-brand {
     border-bottom: none;
