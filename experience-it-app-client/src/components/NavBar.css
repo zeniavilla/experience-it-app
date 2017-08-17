@@ -2,6 +2,22 @@
     background: #fff;
     border-bottom: 1px solid #e4e4e4;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.navbar-brand {
+    font: 600 1.4em 'Lato', sans-serif;
+    height: 70px;
+    letter-spacing: 3px;
+    padding: 22px 0;
+}
+
+.active.navbar-brand {
+    border-bottom: none;
+}
+
+ul.nav.navbar-nav.navbar-right {
+    padding-top: 10px;
 }
 
 .brand-navbar.navbar a {
@@ -11,8 +27,8 @@
 }
 
 .active {
-    border-bottom: 2px solid #008489;
-    padding-bottom: 15px;
+    border-bottom: 3px solid #008489;
+    padding-bottom: 25px;
 }
 
 /* Extend Bootstrap navbar width for 4k resolution  */
