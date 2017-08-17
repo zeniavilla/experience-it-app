@@ -37,14 +37,13 @@ class Experiences extends Component {
             <Experience key={experience.id} experience={experience} handleOnClick={this.handleOnClick} />)
 
         return (
-            <div className="clearfix">
-                <Switch>
-                <Route path="/experiences/:experienceId" component={ExperienceShow} />
-                    <div className="experiences-main">
-                        {renderExperiences}
-                    </div>
-                </Switch>
-            </div>
+            <Switch>
+            <Route path="/experiences/:experienceId" component={ExperienceShow} />
+                
+                <div>
+                    {renderExperiences}
+                </div>
+            </Switch>
         )
     }
 };
