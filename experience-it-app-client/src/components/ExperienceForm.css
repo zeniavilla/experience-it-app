@@ -47,6 +47,7 @@
 }
 
 .form-body {
+    font-size: 1.09em;
     line-height: 180%;
     margin: 2% auto;
 }
@@ -70,6 +71,10 @@ button.btn-primary, .btn-primary:active, .btn-primary:focus {
     border: 2px solid #ff7e82;
 }
 
+.form-sidebar {
+    display: none;
+}
+
 .form-sidebar i {
     font-size: 2.8em;
     opacity: .7;
@@ -81,8 +86,20 @@ i.fa.fa-eye {
 
 i.fa.fa-handshake-o {
     color: #ffaa91;
+    margin-top: 6%;
 }
 
 i.fa.fa-ticket {
     color: #ffd77c;
+    margin-top: 6%;
+}
+
+.form-sidebar h2 {
+    letter-spacing: 1px;
+}
+
+@media (min-width: 1127px) {
+    .form-sidebar {
+        display: inline;
+    }
 }
