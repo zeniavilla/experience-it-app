@@ -18,18 +18,8 @@ const NavBar = () => {
                 <NavItem><NavLink to="/describe-your-experience" exact>Add Experience</NavLink></NavItem>
                 </Nav>
             </Navbar>
-
-            <Navbar>
-                <Nav>
-                    <NavDropdown eventKey={1} title="Categories" id="categories-dropdown">
-                        <MenuItem></MenuItem>
-                    </NavDropdown>
-                </Nav>
-            </Navbar>
         </div>
     )
 }
-
-            
 
 export default NavBar;
