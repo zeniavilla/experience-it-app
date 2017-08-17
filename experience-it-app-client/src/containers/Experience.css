@@ -3,31 +3,16 @@
     max-width: 99%;
 }
 
-.experience-card {
-    float: left;
-    margin: 0 .5%;
-}
-
  .experience-img-wrapper {
-    height: 340px;  
-    overflow: hidden;
-    width: 293px;  
+    background-size: cover;
+    background-position: center;
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
 }
-
- .experience-card img {
-    margin: 0 0 0 -150px;    
-    max-height: 100%; 
-    min-height: 100%; 
-     /* min-width: 100%; */
-}  
-
-    .experience-card img:hover {
+    .experience-img-wrapper:hover {
         opacity: 0.6;
     }
-
-/* div.experience-card:first-of-type, div.experience-card:nth-of-type(7n) {
-    margin-left: 1.5%;
-} */
 
 .experience-card h2 {
     color:#585858;
