@@ -7,7 +7,7 @@ import './NavBar.css';
 const NavBar = () => {
     return (
         <div>
-            <Navbar className="brand-navbar">
+            <Navbar className="navbar-fixed-top">
                 <Navbar.Header>
                 <Navbar.Brand>
                 <NavLink to="/" exact>Experience It</NavLink>
