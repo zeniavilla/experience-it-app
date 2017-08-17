@@ -40,7 +40,7 @@ class Experiences extends Component {
             <Switch>
             <Route path="/experiences/:experienceId" component={ExperienceShow} />
                 
-                <div>
+                <div className="clearfix">
                     {renderExperiences}
                 </div>
             </Switch>
