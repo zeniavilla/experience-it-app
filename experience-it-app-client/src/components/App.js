@@ -5,6 +5,7 @@ import './App.css';
 import Experiences from '../containers/Experiences';
 import ExperienceNew from '../containers/ExperienceNew';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
@@ -15,6 +16,8 @@ class App extends Component {
 
               <Route path="/(experiences|)" component={Experiences} />
               <Route path="/describe-your-experience" component={ExperienceNew} />
+          
+              <Footer />
           </div>
       </Router>
     );
