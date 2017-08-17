@@ -9,14 +9,17 @@ const NavBar = () => {
         <div>
             <Navbar className="navbar-fixed-top">
                 <Navbar.Header>
-                <Navbar.Brand>
-                <NavLink to="/" exact>Experience It</NavLink>
-                </Navbar.Brand>
+                    <Navbar.Brand>
+                        <NavLink to="/" exact>Experience It</NavLink>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
                 </Navbar.Header>
-                <Nav pullRight>
-                <NavItem><NavLink to="/" exact>Experiences</NavLink></NavItem>
-                <NavItem><NavLink to="/describe-your-experience" exact>Add Experience</NavLink></NavItem>
-                </Nav>
+                <Navbar.Collapse>
+                    <Nav pullRight>
+                        <NavItem><NavLink to="/" exact>Experiences</NavLink></NavItem>
+                        <NavItem><NavLink to="/describe-your-experience" exact>Add Experience</NavLink></NavItem>
+                    </Nav>
+                </Navbar.Collapse>
             </Navbar>
         </div>
     )
