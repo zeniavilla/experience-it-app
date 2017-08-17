@@ -17,8 +17,9 @@ nav.navbar-static-bottom.navbar.navbar-default {
     max-width: 99%;
 }
 
-a.navbar-brand {
-    font-size: 1em;
+p.navbar-text {
+    font: 1em 'Lato', sans-serif;
+    margin-top: 25px
 }
 
 .navbar-static-bottom i {
