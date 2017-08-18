@@ -1,6 +1,6 @@
 # Experience It App
 
-This Rails app allows displays a collection of curated experiences in LA. It allows a user to create a new experience and 'like' existing experiences. The front-end utilizes React and Redux.
+This Rails app allows displays a collection of curated experiences in Los Angeles. It allows a user to create a new experience and 'like' existing experiences. The front-end utilizes React and Redux.
 
 ## Installation
 
