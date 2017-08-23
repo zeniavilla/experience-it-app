@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700|Roboto:100,300,400,500,700,900');
 
+html {
+    min-height: 100%;
+    position: relative;
+}
+
  a {
     text-decoration: none;
 }
@@ -39,4 +44,8 @@ div.clearfix {
 
 nav.brand-navbar {
     margin-bottom: 0;
+}
+
+#wrapper {
+    margin-bottom: 100px;
 }

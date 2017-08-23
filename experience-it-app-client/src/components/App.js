@@ -12,12 +12,14 @@ class App extends Component {
     return (
       <Router>
           <div>
+            <div id="wrapper">
               <NavBar />
 
               <Route path="/(experiences|)" component={Experiences} />
               <Route path="/describe-your-experience" component={ExperienceNew} />
-          
-              <Footer />
+            </div>
+
+            <Footer />
           </div>
       </Router>
     );
