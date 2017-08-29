@@ -35,14 +35,14 @@ class Experience extends Component {
                     <Grid className="experience-img-wrapper" style={backgroundStyle} fluid></Grid> 
                     <h2>{name}</h2>
                     <h4>{location}</h4>
-                    <h4><span className="change-icon">
+                    {/* <h4><span className="change-icon">
                         { (liked)
                         ? <i id={id} className="fa fa-heart"></i>
                         : <i id={id} className="fa fa-heart-o"></i>
                         }
                     </span>
                     <Pluralize singular="like" plural="likes" count={likes} />
-                    </h4>
+                    </h4> */}
 
 
                     <h4 onClick={ this.handleOnClick}><i id={id} className="fa fa-heart"></i>
