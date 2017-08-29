@@ -9,6 +9,13 @@ import ExperienceShow from '../containers/ExperienceShow';
 import { getExperiences, likeExperience } from '../actions/experienceActions';
 
 class Experiences extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            experiences: []
+        }
+    }
 
     componentDidMount = () => {
         // this.props.getExperiences();
