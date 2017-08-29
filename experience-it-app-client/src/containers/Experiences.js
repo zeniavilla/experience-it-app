@@ -11,29 +11,45 @@ import { getExperiences, likeExperience } from '../actions/experienceActions';
 class Experiences extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            experiences: []
+        }
     }
 
     componentDidMount = () => {
-        this.props.getExperiences();
-    }
-
-    componentDidUpdate = (prevProps, prevState) => {
-        if (prevProps.experience.updated_at !== this.props.experience.updated_at) {
-        this.props.getExperiences();
-        }
+        // this.props.getExperiences();
+        fetch(`${process.env.REACT_APP_API_URL}/experiences`)
+            .then(response => response.json())
+            .then(experiences => this.setState({ experiences: experiences }))
     }
 
     handleOnClick = event => {
         event.preventDefault();
-        
-        let experienceId = event.target.id;
-        let experience = this.props.experiences.find(experience => experience.id == experienceId)
+        const experiences = this.state.experiences
 
-        this.props.likeExperience(experience);
+        for (var i in experiences) {
+            if (experiences[i].id == event.target.id) {
+                experiences[i].likes += 1;
+                break;
+            }
+        }
+
+        this.setState({experiences: experiences})
     }
     
     render() {
-        let renderExperiences = this.props.experiences.map(experience =>
+        let renderExperiences = this.state.experiences
+            .sort((a, b) => {
+                if (a.likes > b.likes) {
+                    return -1;
+                } else if (a.likes < b.likes) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            })
+            .map(experience =>
             <Experience key={experience.id} experience={experience} handleOnClick={this.handleOnClick} />)
 
         return (
