@@ -24,6 +24,20 @@ class Experiences extends Component {
             .then(experiences => this.setState({ experiences: experiences }))
     }
 
+    handleOnClick = event => {
+        event.preventDefault();
+        const experiences = this.state.experiences
+
+        for (var i in experiences) {
+            if (experiences[i].id == event.target.id) {
+                experiences[i].likes += 1;
+                break;
+            }
+        }
+
+        this.setState({experiences: experiences})
+    }
+    
     render() {
         let renderExperiences = this.state.experiences
             .sort((a, b) => {
