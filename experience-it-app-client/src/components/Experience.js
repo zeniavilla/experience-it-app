@@ -17,11 +17,12 @@ class Experience extends Component {
     handleOnClick = event => {
         event.preventDefault();
         this.setState({likes: this.state.likes + 1})
+
     }
     
-    // const handleOnClick = props.handleOnClick;
     render() {
         const { id, name, location, img_url, likes, liked } = this.props.experience;
+        const handleOnClick = this.props.handleOnClick;
     
         const backgroundStyle = {
             backgroundImage: `url(${img_url})`
@@ -45,8 +46,12 @@ class Experience extends Component {
                     </h4> */}
 
 
-                    <h4 onClick={ this.handleOnClick}><i id={id} className="fa fa-heart"></i>
-                        {this.state.likes} likes
+                    <h4 onClick={handleOnClick}>
+                        { (likes > 0)
+                        ? <i id={id} className="fa fa-heart"></i>
+                        : <i id={id} className="fa fa-heart-o"></i>
+                        }
+                        {likes} likes
                     </h4>
                 </div>
             </NavLink>
