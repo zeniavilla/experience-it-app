@@ -9,31 +9,26 @@ import ExperienceShow from '../containers/ExperienceShow';
 import { getExperiences, likeExperience } from '../actions/experienceActions';
 
 class Experiences extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     componentDidMount = () => {
-        this.props.getExperiences();
+        // this.props.getExperiences();
+        fetch(`${process.env.REACT_APP_API_URL}/experiences`)
+            .then(response => response.json())
+            .then(experiences => this.setState({ experiences: experiences }))
     }
 
-    componentDidUpdate = (prevProps, prevState) => {
-        if (prevProps.experience.updated_at !== this.props.experience.updated_at) {
-        this.props.getExperiences();
-        }
-    }
-
-    handleOnClick = event => {
-        event.preventDefault();
-        
-        let experienceId = event.target.id;
-        let experience = this.props.experiences.find(experience => experience.id == experienceId)
-
-        this.props.likeExperience(experience);
-    }
-    
     render() {
-        let renderExperiences = this.props.experiences.map(experience =>
+        let renderExperiences = this.state.experiences
+            .sort((a, b) => {
+                if (a.likes > b.likes) {
+                    return -1;
+                } else if (a.likes < b.likes) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            })
+            .map(experience =>
             <Experience key={experience.id} experience={experience} handleOnClick={this.handleOnClick} />)
 
         return (
