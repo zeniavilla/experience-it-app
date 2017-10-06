@@ -17,7 +17,7 @@ const ExperienceShowItem = props => {
 
     return (
         <div className="experience-show-main clearfix">
-            <Col xs={6}>
+            <Col sm={6}>
                 <h1>{name}</h1>
                 <h4>{location}</h4>
 
