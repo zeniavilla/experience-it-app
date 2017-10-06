@@ -1,0 +1,35 @@
+@media only screen and (max-width: 1195px) {
+    body {
+        font-size: 1.2em;
+    }
+    h1 {
+      font-size: 2em;
+      margin-top: 100px;
+    }
+    div.form-sidebar {
+      margin-top: 50px;
+    }
+    div.experience-show-main {
+      max-width: 90%;
+    }
+    .show-img {
+      margin-top: 10%;
+      margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 1126px) {
+    div.form-field, div.form-field-select {
+        margin-bottom: 5px;
+    }
+    div.form-body {
+      margin-top: 15px;
+      margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 991px) {
+    div.experience-img-wrapper {
+      padding-bottom: 100%;
+    }
+}
