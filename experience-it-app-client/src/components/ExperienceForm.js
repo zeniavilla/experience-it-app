@@ -11,7 +11,7 @@ const ExperienceForm = props => {
 
     return (
         <Grid className="form-main clearfix" fluid>
-            <Col xs={4}>
+            <Col md={4}>
                 <h1>Pitch an experience</h1>
                 <div className="form-body">As you write, remember that Experience It users are some of the most novelty-driven, curious, adventure-seekers. We strive to showcase the best LA has to offer, whether it's hikes with scenic views, the best places to bike ride, or the newest food festivals. Share your unique experience.</div>
 
