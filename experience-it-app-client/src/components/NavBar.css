@@ -28,9 +28,10 @@ ul.nav.navbar-nav.navbar-right {
         opacity: .8;
     }
 
-.active {
-    border-bottom: 3px solid #008489;
-    padding-bottom: 25px;
+
+
+.container {
+    width: 90%;
 }
 
 /* Extend Bootstrap navbar width for 4k resolution  */
@@ -49,5 +50,12 @@ ul.nav.navbar-nav.navbar-right {
 @media (min-width: 1800px) {
     .container {
         width: 1770px;
+    }
+}
+
+@media (min-width: 768px) {
+    .active {
+        border-bottom: 3px solid #008489;
+        padding-bottom: 25px;
     }
 }
